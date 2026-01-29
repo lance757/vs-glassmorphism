@@ -3,62 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Refined Glassmorphism</title>
+  <title>Mi Casa Glassmorphism</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', sans-serif;
     }
 
+    /* 1. Set the image as the background of the body */
     body {
-      margin: 0;
-      height: 100vh;
+      background: url('your-image-path.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: center;
-      /* Background is crucial; glass needs something to blur! */
-      background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      align-items: flex-end; /* Places the boxes at the bottom like your ref */
+    }
+
+    .glass-container {
+      display: flex;
+      width: 100%;
+      height: 200px; /* Adjust height as needed */
     }
 
     .glass-box {
-      /* 1. Transparency: White with low alpha */
-      background: rgba(255, 255, 255, 0.2); 
-      
-      /* 2. The "Frost": Backdrop filter is the magic ingredient */
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      
-      /* 3. The Edge: A thin, light border mimics glass thickness */
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      
-      /* 4. Depth: Subtle shadow */
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      
-      /* Styling the container */
-      width: 80%;
-      max-width: 500px;
-      height: 300px;
-      border-radius: 20px;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
-      text-align: center;
+      font-weight: bold;
+      
+      /* 2. The Glass Effect */
+      background: rgba(255, 255, 255, 0.1); 
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      
+      /* 3. Subtle borders to separate the boxes */
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 20px;
+      text-align: center;
     }
 
-    h1 {
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Variation: adding some color tint to specific boxes */
+    .blue-tint {
+      background: rgba(52, 152, 219, 0.3);
     }
   </style>
 </head>
 <body>
 
-  <div class="glass-box">
-    <div>
-      <h1>Glassmorphism</h1>
-      <p>Clean, modern, and blurred.</p>
-    </div>
+  <div class="glass-container">
+    <div class="glass-box">Mi Casa and Six Senses</div>
+    <div class="glass-box blue-tint">Glassmorphism Effect</div>
+    <div class="glass-box">View From EDSA</div>
   </div>
 
 </body>
