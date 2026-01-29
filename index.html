@@ -3,57 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glassmorphism Boxes</title>
+  <title>Refined Glassmorphism</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      min-height: 100vh;
-      min-width: 100vw;
-      height: 100vh;
-      width: 100vw;
-      background: transparent;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      font-family: Arial, sans-serif;
-    }
-
-    .glass-container {
-      width: 100vw;
-      height: 100vh;
       margin: 0;
-      padding: 0;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* Background is crucial; glass needs something to blur! */
+      background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .glass-box {
-      background: rgba(255, 255, 255, 0.4); /* Use white for glass effect */
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border: 2px solid rgba(255, 255, 255, 0.4); /* Subtle white border */
-      width: 100vw;
-      height: 100vh;
-      transition: border-radius 0.2s;
+      /* 1. Transparency: White with low alpha */
+      background: rgba(255, 255, 255, 0.2); 
+      
+      /* 2. The "Frost": Backdrop filter is the magic ingredient */
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      
+      /* 3. The Edge: A thin, light border mimics glass thickness */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      
+      /* 4. Depth: Subtle shadow */
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      
+      /* Styling the container */
+      width: 80%;
+      max-width: 500px;
+      height: 300px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="glass-container">
-    <div class="glass-box"></div>
+
+  <div class="glass-box">
+    <div>
+      <h1>Glassmorphism</h1>
+      <p>Clean, modern, and blurred.</p>
+    </div>
   </div>
+
 </body>
 </html>
-
-
-
-
