@@ -3,58 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glassmorphism Navigation</title>
   <style>
-    body, html {
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
-      font-family: 'Segoe UI', sans-serif;
     }
-
-    /* 1. Set the image as the background of the body */
     body {
-      background: url('your-image-path.jpg') no-repeat center center fixed;
+      min-height: 100vh;
+      width: 100vw;
+      /* 1. Add your image here so the glass sits on top of it */
+      background: url('image_44b73f.jpg') no-repeat center center;
       background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: flex-end; /* Places the boxes at the bottom like your ref */
+      align-items: flex-end; /* This pushes the box to the bottom like your screenshot */
+      font-family: Arial, sans-serif;
     }
-
     .glass-container {
-      display: flex;
       width: 100%;
-      height: 200px; /* Adjust height as needed */
+      /* Adjust height to show part of the city image above it */
+      height: 30vh; 
+      display: flex;
     }
-
     .glass-box {
-      flex: 1;
+      /* Using your specific transparency and blur values */
+      background: rgba(255, 255, 255, 0.289);
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
+      font-size: 1.2rem;
       font-weight: bold;
-      
-      /* 2. The Glass Effect */
-      background: rgba(255, 255, 255, 0.1); 
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      
-      /* 3. Subtle borders to separate the boxes */
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Variation: adding some color tint to specific boxes */
-    .blue-tint {
-      background: rgba(52, 152, 219, 0.3);
+      /* No border or outline as requested */
     }
   </style>
 </head>
 <body>
-
-
+  <div class="glass-container">
+    <div class="glass-box">
+      Mi Casa and Six Senses
+    </div>
+  </div>
 </body>
 </html>
-
